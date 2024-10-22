@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import styles from './Task.module.css'
 
 const Task = (props) => {
-    const { dataTask: { text, days, isDone }, setDoneTask } = props;
-    const setDone = () => setDoneTask()
+    const { dataTask: { id, text, days, isDone }, setDoneTask } = props;
+    const setDone = () => setDoneTask(id)
     return (
         <div className={styles.task}>
             <p style={{color: isDone ? 'green' : 'red'}}>{text}</p>
