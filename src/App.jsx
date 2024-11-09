@@ -1,10 +1,14 @@
-import TasksList from "./components/TasksList/TasksList"
+import InputCheckBox from "./components/InputCheckBox/InputCheckBox"
+import InputText from "./components/InputText/InputText"
+
 
 function App() {
 
   return (
     <>
-      <TasksList/>
+      <InputText />
+      <hr />
+      <InputCheckBox/>
     </>
   )
 }
