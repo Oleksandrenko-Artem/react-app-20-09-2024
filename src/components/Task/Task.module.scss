@@ -1,0 +1,46 @@
+$width: 25%;
+$min-width: 500px;
+$border-width: 1px;
+$colorbackground: orange;
+$indent: 30px;
+
+.task{
+    width: $width * 2;
+    min-width: $min-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: $border-width solid black;
+    background-color: $colorbackground;
+    padding: 0 $indent;
+    margin: $indent;
+    &:hover{
+        // background-color: darken($color: $colorbackground, $amount: 10%);
+        // background-color: lighten($color: $colorbackground, $amount: 10%);
+        // background-color: transparentize($color: $colorbackground, $amount: 0.5)
+        // background-color: invert($color: $colorbackground);
+        // color: $colorbackground;
+        background-color: mix($color1: red, $color2: yellow, $weight: 20);
+    }
+    p:first-child{
+        margin-right: auto;
+        font: {
+            size: 1.2em;
+            family: serif;
+            weight: 600;
+        }
+        text: {
+            shadow: 2px 2px 2px white;
+            decoration: {
+                line: overline;
+                style: dotted;
+            }
+        }
+    }
+    button{
+        margin-left: $indent;
+        &:hover{
+            background-color: $colorbackground;
+        }
+    }
+}
