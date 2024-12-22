@@ -1,10 +1,12 @@
-$width: 25%;
-$min-width: 500px;
-$border-width: 1px;
-$colorbackground: orange;
+@use '/src/common/styles/colors' as *;
+@use '/src/common/styles/widths' as *;
+@use '/src/common/styles/mixins' as *;
+@use '/src/common/styles/inherits' as *;
+
 $indent: 30px;
 
 .task{
+    @include border-radius(8px);
     width: $width * 2;
     min-width: $min-width;
     display: flex;
@@ -15,20 +17,11 @@ $indent: 30px;
     padding: 0 $indent;
     margin: $indent;
     &:hover{
-        // background-color: darken($color: $colorbackground, $amount: 10%);
-        // background-color: lighten($color: $colorbackground, $amount: 10%);
-        // background-color: transparentize($color: $colorbackground, $amount: 0.5)
-        // background-color: invert($color: $colorbackground);
-        // color: $colorbackground;
-        background-color: mix($color1: red, $color2: yellow, $weight: 20);
+        @extend %hover;
     }
     p:first-child{
         margin-right: auto;
-        font: {
-            size: 1.2em;
-            family: serif;
-            weight: 600;
-        }
+        @include font(26px, serif, 600);
         text: {
             shadow: 2px 2px 2px white;
             decoration: {
@@ -38,9 +31,11 @@ $indent: 30px;
         }
     }
     button{
+        @include font(20px, Arial, 900);
+        @include border-radius(4px);
         margin-left: $indent;
         &:hover{
-            background-color: $colorbackground;
+            @extend %hover;
         }
     }
 }
