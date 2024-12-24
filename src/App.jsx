@@ -1,10 +1,14 @@
-import TasksList from './components/TasksList/TasksList';
+import { useState } from 'react';
+import Timer from "./components/Timer/Timer";
+
 
 function App() {
-
+  const [show, setShow] = useState(false);
+  const changeShow = () => setShow(!show);
   return (
     <>
-      <TasksList/>
+      <button onClick={changeShow}>swith show timer</button>
+      {show && <Timer/>}
     </>
   )
 }
