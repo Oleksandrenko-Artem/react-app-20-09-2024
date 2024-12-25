@@ -1,14 +1,11 @@
-import { useState } from 'react';
-import Timer from "./components/Timer/Timer";
+import CursorTracker from "./components/CursorTracker/CursorTracker"
 
 
 function App() {
-  const [show, setShow] = useState(false);
-  const changeShow = () => setShow(!show);
+  
   return (
     <>
-      <button onClick={changeShow}>swith show timer</button>
-      {show && <Timer/>}
+      <CursorTracker/>
     </>
   )
 }
