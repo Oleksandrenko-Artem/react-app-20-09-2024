@@ -1,6 +1,7 @@
 import Wrapper from './components/Wrapper/Wrapper';
 import Timer from './components/Timer/Timer';
 import DropdownMenu from './components/DropdownMenu/DropdownMenu';
+import Tooltip from './components/Tooltip/Tooltip';
 
 
 function App() {
@@ -8,10 +9,15 @@ function App() {
   return (
     <>
       <Wrapper>
+        <Tooltip textTooltip='this is a timer'>
+          <h2>Timer</h2>
+        </Tooltip>
         <Timer/>
       </Wrapper>
       <Wrapper>
-        <h2>Dropdown Menu!</h2>
+        <Tooltip textTooltip='click button and select'>
+          <h2>Dropdown Menu!</h2>
+        </Tooltip>
         <DropdownMenu text='hi, user'>
           <p>Lorem, ipsum dolor.</p>
           <p>Molestias, illo facere!</p>
