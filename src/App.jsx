@@ -1,31 +1,32 @@
-import { useState, useEffect } from 'react';
 import Wrapper from './components/Wrapper/Wrapper';
 import Timer from './components/Timer/Timer';
-import ModalWindow from './components/ModalWindow/ModalWindow';
+import DropdownMenu from './components/DropdownMenu/DropdownMenu';
+
 
 function App() {
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  useEffect(() => {
-    const idTimeOut = setTimeout(() => {
-      setIsOpenModal(true);
-    }, 2000);
-    return () => {
-      clearTimeout(idTimeOut);
-    };
-  }, []);
-  const closeModal = () => {setIsOpenModal(false)}
+
   return (
     <>
-      {isOpenModal &&
-        (<ModalWindow closeModal={closeModal}>
-        <h3>modal window</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt eos porro consectetur provident asperiores.</p>
-      </ModalWindow>)}
       <Wrapper>
         <Timer/>
       </Wrapper>
       <Wrapper>
-        <h2>Hi!</h2>
+        <h2>Dropdown Menu!</h2>
+        <DropdownMenu text='hi, user'>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Molestias, illo facere!</p>
+          <p>Animi, itaque nobis.</p>
+        </DropdownMenu>
+        <DropdownMenu text='type' widthList={300}>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Molestias, illo facere!</p>
+          <p>Animi, itaque nobis.</p>
+        </DropdownMenu>
+        <DropdownMenu text='links'>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Molestias, illo facere!</p>
+          <p>Animi, itaque nobis.</p>
+        </DropdownMenu>
       </Wrapper>
       <Wrapper>
         <h2>Hello!</h2>
