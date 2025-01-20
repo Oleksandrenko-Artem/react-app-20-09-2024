@@ -1,6 +1,6 @@
 @use '/src/common/styles/colors' as *;
 
 %hover {
-    background-color: invert($color: $colorbackground);
-    color: $colorbackground;
+    background-color: invert($color: $colorBackground);
+    color: $colorBackground;
 }

@@ -1,0 +1,14 @@
+@use '/src/common/styles/colors' as *;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color: $textColorSecond;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2em;
+}
