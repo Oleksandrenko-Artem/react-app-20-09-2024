@@ -1,0 +1,38 @@
+@use '/src/common/styles/colors' as *;
+@use '/src/common/styles/widths' as *;
+
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: $minWidth;
+    width: 50%;
+    margin: auto;
+    label{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}
+.button{
+    color: $textColorSecond;
+    background-color: $colorBackground;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    &:hover {
+        color: $textColor;
+        background-color: $colorBackgroundHover;
+    }
+}
+input[type="submit"]:disabled {
+    color: $textColorSecond;
+    background: $colorBackgroundSecond;
+    &:hover {
+        color: $textColorHover;
+        background-color: $colorBgHoverSecond;
+    }
+}
+.error{
+    color: red;
+}

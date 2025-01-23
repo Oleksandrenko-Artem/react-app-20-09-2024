@@ -1,4 +1,6 @@
 @use '/src/common/styles/colors' as *;
+@use '/src/common/styles/widths' as *;
+
 .menu{
     ul{
         list-style: none;
@@ -6,13 +8,16 @@
             display: inline-block;
             a{
                 display: block;
-                padding: 10px 10px;
+                padding: 5px 10px;
                 margin: 0 5px;
                 background-color: $colorBackground;
-                color: $textColor;
+                color: $textColorSecond;
+                border: none;
+                border-radius: 10px;
+                font-size: 1em;
                 text-decoration: none;
                 &:hover{
-                    color: $textColorSecond;
+                    color: $textColor;
                     background-color: $colorBackgroundHover;
                 }
             }
