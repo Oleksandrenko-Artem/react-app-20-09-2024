@@ -1,12 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from 'yup';
 import { useNavigate } from "react-router-dom";
 import styles from './SignInForm.module.scss'
-
-const signInSchema = Yup.object({
-    email: Yup.string().trim().email('enter correct email, please').required(),
-    password: Yup.string().min(6, 'must be more than 6').max(16).required('required')
-})
+import { signInSchema } from './../../helpers/validation';
 
 const SignInForm = () => {
     const navigate = useNavigate();
