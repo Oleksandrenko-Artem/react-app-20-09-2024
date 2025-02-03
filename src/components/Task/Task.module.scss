@@ -8,12 +8,12 @@ $indent: 30px;
 .task{
     @include border-radius(8px);
     width: $width * 2;
-    min-width: $min-width;
+    min-width: $minWidth;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: $border-width solid black;
-    background-color: $colorbackground;
+    border: $borderWidth solid black;
+    background-color: $colorBackground;
     padding: 0 $indent;
     margin: $indent;
     &:hover{
